@@ -1,4 +1,8 @@
 ﻿using System;
+using BlindSapper.CharacterControl;
+using BlindSapper.Constants;
+using BlindSapper.GameController;
+using BlindSapper.Visualisation;
 
 namespace BlindSapper
 {
@@ -6,7 +10,19 @@ namespace BlindSapper
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            GameMaster gameMaster = new GameMaster();
+            gameMaster.FinishPosition = new Position
+            {
+                x = 25,
+                y = 25
+            };
+            gameMaster.StartPosition = new Position
+            {
+                x = 2,
+                y = 2
+            };
+            gameMaster.GameStart();
+            Console.ReadKey();
         }
     }
 }    
